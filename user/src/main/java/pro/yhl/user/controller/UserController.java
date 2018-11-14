@@ -21,26 +21,26 @@ public class UserController {
 
     @PutMapping(value = "/addUser")
     public boolean addUser(String account, String passWord) {
-        return false;
+        return  userService.addUser(account, passWord);
     }
 
     @PostMapping(value = "/updateUser")
     public boolean updateUser(String userName, String passWord, String imgUrl) {
-        return false;
+        return userService.updateUser(userName,userName,passWord,imgUrl);
     }
 
     @GetMapping(value = "/findUser")
     public UserInfo findUser(String account) {
-        return null;
+        return userService.findUser(account);
     }
 
     @GetMapping(value = "/verifyUser")
     public boolean verifyUser(String account, String passWord) {
-        return false;
+        return userService.verifyUser(account, passWord);
     }
 
     @PostMapping(value = "/deleteUser")
     public boolean deleteUser(String account, String passWord) {
-        return false;
+        return userService.deleteUser(account, passWord);
     }
 }
